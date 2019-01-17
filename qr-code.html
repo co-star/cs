@@ -26,7 +26,7 @@
             margin: 15px;
             padding: 0;
         }
-        .wrap img{
+        .wrap #img{
             position: fixed;
             left: 0;
             top: 0;
@@ -90,7 +90,6 @@
             width: 100px;
             height: 100px;
             margin: 0 auto;
-            background-color: #313133;
         }
         .wrap .code .qr-code img{
             width: 100px;
@@ -185,7 +184,7 @@
 <body>
 
     <div id="app" class="wrap">
-        <img :src="img" alt="">
+        <img :src="img" alt="" id="img">
         <div class="code">
             <div class="head">
                 <div class="title">真爱课堂-挽回爱情高级私人定制指…真爱课堂-挽回爱情高级私人定制指…</div>
@@ -195,7 +194,7 @@
                 </div>
                 <i></i>
             </div>
-            <div class="qr-code"><img :src="img" alt="" id="img"></div>
+            <div class="qr-code"><img :src="img" alt=""></div>
             <button class="qr-btn" @touchstart="saveImg()">长按保存二维码</button>
         </div>
         <div class="explanation">
