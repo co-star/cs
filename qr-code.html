@@ -100,9 +100,15 @@
             margin: 15px;
             max-width: 315px;
             height: 45px;
-            background-image: url('http://valar.ixiaolu.com/h5/qr-img/btn@3x.png');
+            padding: 0 100px;
+            border: 0px solid transparent;
+            outline: none;
+            background-color: #108EE9;
+            font-size: 16px;
+            color: #FFFFFF;
+            /* background-image: url('http://valar.ixiaolu.com/h5/qr-img/btn@3x.png');
             background-size: 100% 100%;
-            background-repeat: no-repeat;
+            background-repeat: no-repeat; */
         }
         .wrap .explanation .step{
             margin: 15px 0;
@@ -190,7 +196,7 @@
                 <i></i>
             </div>
             <div class="qr-code"><img :src="img" alt="" id="img"></div>
-            <div class="qr-btn" @touchstart="saveImg()"></div>
+            <button class="qr-btn" @touchstart="saveImg()">长按保存二维码</button>
         </div>
         <div class="explanation">
             <div class="step">
@@ -231,24 +237,7 @@
             },
             methods: {
                 saveImg: function(){
-                    alert(1)
-                    let timer = null
-                    let startTime = ''
-                    let endTime = ''
-                    const label = document.querySelector('.wrap>img');
 
-                    label.addEventListener('touchstart', function () {
-                        startTime = +new Date()
-                    })
-
-                    label.addEventListener('touchend', function () {
-                        endTime = +new Date()
-                        clearTimeout(timer)
-                        if (endTime - startTime < 700) {
-                            // 处理点击事件
-                            this.saveImg;
-                        }
-                    })
                 }
             }
         });
