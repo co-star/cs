@@ -12,9 +12,6 @@
         if(dpr>=2){var fakeBody=document.createElement("body");var testElement=document.createElement("div");testElement.style.border=".5px solid transparent";fakeBody.appendChild(testElement);docEl.appendChild(fakeBody);if(testElement.offsetHeight===1){docEl.classList.add("hairlines")}docEl.removeChild(fakeBody)};
     </script>
     <style>
-        [v-cloak]{
-            display: none;
-        }
         body{
             margin: 0;
             padding: 0;
@@ -105,66 +102,14 @@
             background-color: #108EE9;
             font-size: 16px;
             color: #FFFFFF;
-            /* background-image: url('http://valar.ixiaolu.com/h5/qr-img/btn@3x.png');
-            background-size: 100% 100%;
-            background-repeat: no-repeat; */
         }
         .wrap .explanation .step{
             margin: 15px 0;
-        }
-        .wrap .explanation .step .num {
-            display: inline-flex;
-            justify-content: space-between;
-            align-items: center;
             width: 100%;
-        }
-        .wrap .explanation .step .num span{
-            display: block;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-        }
-        .wrap .explanation .step .num span:nth-child(1){
-            margin-left: 5px;
-            background-image: url('http://valar.ixiaolu.com/h5/qr-img/circle@3x.png');
+            height: 60px;
+            background-image: url(http://valar.ixiaolu.com/h5/qr-img/step.png);
             background-size: 100% 100%;
             background-repeat: no-repeat;
-        }
-        .wrap .explanation .step .num span:nth-child(3){
-            background-image: url('http://valar.ixiaolu.com/h5/qr-img/copy 2@3x.png');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-        }
-        .wrap .explanation .step .num span:nth-child(5){
-            background-image: url('http://valar.ixiaolu.com/h5/qr-img/copy 3@3x.png');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-        }
-        .wrap .explanation .step .num span:nth-child(7){
-            background-image: url('http://valar.ixiaolu.com/h5/qr-img/copy 4@3x.png');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-        }
-        .wrap .explanation .step .num span:nth-child(9){
-            margin-right: 15px;
-            background-image: url('http://valar.ixiaolu.com/h5/qr-img/copy@3x.png');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-        }
-        .wrap .explanation .step .num i{
-            display: block;
-            width: 30px;
-            height: 1px;
-            background-image: url('http://valar.ixiaolu.com/h5/qr-img/border@3x.png');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-        }
-        .wrap .explanation .step .font{
-            display: inline-flex;
-            justify-content: space-between;
-            margin-top: 9px;
-            font-size: 11px;
-            color: #108EE9;
         }
         .wrap .explanation .detailed{
             display: flex;
@@ -184,7 +129,7 @@
 <body>
 
     <div id="app" class="wrap">
-        <img :src="img" alt="" id="img">
+        <img src="img" alt="" id="img">
         <div class="code">
             <div class="head">
                 <div class="title">真爱课堂-挽回爱情高级私人定制指…真爱课堂-挽回爱情高级私人定制指…</div>
@@ -194,30 +139,11 @@
                 </div>
                 <i></i>
             </div>
-            <div class="qr-code"><img :src="img" alt=""></div>
-            <button class="qr-btn" @touchstart="saveImg()">长按保存二维码</button>
+            <div class="qr-code"><img src="img" alt=""></div>
+            <button class="qr-btn">长按保存二维码</button>
         </div>
         <div class="explanation">
-            <div class="step">
-                <div class="num">
-                    <span></span>
-                    <i></i>
-                    <span></span>
-                    <i></i>
-                    <span></span>
-                    <i></i>
-                    <span></span>
-                    <i></i>
-                    <span></span>
-                </div>
-                <div class="font">
-                    <span>保存图片  &nbsp;二维码</span>
-                    <span>&nbsp;&nbsp;打开支付宝 &nbsp;"扫一扫"识别</span>
-                    <span>输入金额 完成付款</span>
-                    <span>&nbsp;&nbsp;复制订单号&nbsp;&nbsp;&nbsp;&nbsp; 发送给咨询师</span>
-                    <span>&nbsp;&nbsp;&nbsp;咨询师 &nbsp;绑定订单</span>
-                </div>
-            </div>
+            <div class="step"></div>
             <div class="detailed">
                 <span>1、由于微信无法处理支付宝请求，请保存二维码后打开支付宝“扫一扫”完成付款；</span>
                 <span>2、完成付款后，<b>请复制订单号（支付宝-我的-账单）发送给咨询师</b>；</span>
@@ -226,20 +152,5 @@
             </div>
         </div>
     </div>
-
-    <script src="https://valar.ixiaolu.com/common/lib/vue.min.js"></script>
-    <script>
-        var app = new Vue({
-            el: '#app',
-            data: {
-                img:'http://sindar.ixiaolu.com/custom_pay/img/qr_code_bjmdl.jpg'
-            },
-            methods: {
-                saveImg: function(){
-
-                }
-            }
-        });
-    </script>
 </body>
 </html>
